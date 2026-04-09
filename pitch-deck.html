@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuestas | Martínez & Scienza</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --azul:       #2D5BFF;
+            --verde:      #00C896;
+            --dorado:     #cfaa4e;
+            --grafito:    #1A1A1A;
+            --gris-claro: #F9FAFB;
+            --texto:      #4B5563;
+            --blanco:     #ffffff;
+            --font-title: 'Lora', serif;
+            --font-body:  'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--gris-claro);
+            color: var(--grafito);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 700; }
+
+        /* --- Header Brand Style (Matching Index) --- */
+        .site-nav {
+            background-color: var(--grafito);
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo-img { width: 36px; height: 36px; }
+
+        .logo-text {
+            color: white;
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: var(--verde);
+            font-family: var(--font-body);
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        /* --- Content Layout --- */
+        .view-section { padding: 3rem 0; min-height: calc(100vh - 84px); }
+
+        .card-custom {
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+            background: white;
+        }
+
+        .rubro-card {
+            cursor: pointer;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            height: 100%;
+        }
+
+        .rubro-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(45, 91, 255, 0.1);
+            border-color: var(--azul);
+        }
+
+        .rubro-icon-wrapper {
+            width: 80px; height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--gris-claro);
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; color: var(--azul);
+        }
+
+        /* --- Detail View --- */
+        .detail-header { margin-bottom: 2rem; border-bottom: 2px solid var(--gris-claro); padding-bottom: 1rem; }
+        
+        .solucion-box {
+            background: linear-gradient(135deg, rgba(45, 91, 255, 0.05) 0%, rgba(0, 200, 150, 0.05) 100%);
+            border-left: 5px solid var(--azul);
+            padding: 1.5rem; border-radius: 12px;
+            font-size: 1rem; font-weight: 500;
+            color: var(--grafito);
+        }
+
+        .solucion-card { border: 2px solid var(--azul); }
+        
+        .solucion-badge {
+            background: var(--azul); color: white;
+            padding: 6px 16px; border-radius: 20px;
+            font-size: 0.75rem; text-transform: uppercase; font-weight: 700;
+            display: inline-block; margin-bottom: 1rem;
+        }
+
+        .argumento-cierre {
+            background: rgba(0, 200, 150, 0.08);
+            border-radius: 12px; padding: 1.25rem;
+            border-left: 4px solid var(--verde);
+        }
+
+        .ticket-highlight {
+            background: var(--grafito); color: white;
+            padding: 2rem; border-radius: 16px;
+            text-align: center; margin: 2rem 0;
+        }
+
+        .ticket-highlight .amount {
+            font-size: 3rem; font-weight: 800; color: var(--verde);
+            font-family: var(--font-title);
+        }
+
+        .upsell-item {
+            background: white; border: 1px solid #eee;
+            border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem;
+            display: flex; align-items: flex-start; gap: 1rem;
+        }
+
+        .golden-rule {
+            background: var(--azul); color: white;
+            border-radius: 16px; padding: 2rem;
+        }
+
+        .hidden { display: none !important; }
+        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="fade-in">
+
+    <!-- NAVBAR -->
+    <nav class="site-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="brand-logo">
+                <img src="/src/assets/rombos_martinez_scienza.svg" alt="Logo" class="brand-logo-img">
+                <span class="logo-text">Martínez & Scienza<span class="logo-subtitle">SOLUCIONES</span></span>
+            </a>
+            <button class="btn btn-outline-light hidden" id="btnBack" onclick="goHome()" style="border-radius: 8px;">
+                <i class="bi bi-arrow-left me-2"></i>Volver
+            </button>
+            <a href="index.html" class="btn btn-outline-light" id="btnExit" style="border-radius: 8px;">
+                Volver
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- HOME VIEW -->
+        <section id="homeView" class="view-section">
+            <div class="text-center mb-5">
+                <h1 class="display-5 mb-3">Elegí un rubro</h1>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3">
+                    <div class="card-custom rubro-card" onclick="selectRubro('almacen')">
+                        <div class="rubro-icon-wrapper"><i class="bi bi-shop"></i></div>
+                        <h3 class="h5 mb-0">Almacén</h3>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card-custom rubro-card" onclick="selectRubro('ferreteria')">
+                        <div class="rubro-icon-wrapper"><i class="bi bi-tools"></i></div>
+                        <h3 class="h5 mb-0">Ferretería</h3>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card-custom rubro-card" onclick="selectRubro('peluqueria')">
+                        <div class="rubro-icon-wrapper"><i class="bi bi-scissors"></i></div>
+                        <h3 class="h5 mb-0">Estética</h3>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card-custom rubro-card" onclick="selectRubro('kiosco')">
+                        <div class="rubro-icon-wrapper"><i class="bi bi-basket"></i></div>
+                        <h3 class="h5 mb-0">Kiosco</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAIL VIEW -->
+        <section id="detailView" class="view-section hidden">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="detail-header text-center">
+                        <h2 id="rubroTitle" class="h1">Estrategia</h2>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-uppercase small fw-bold text-muted mb-3">¿En qué consiste esta solución?</p>
+                        <div class="solucion-box"><span id="dolorText"></span></div>
+                    </div>
+
+                    <div class="card-custom solucion-card p-4 p-md-5 mb-4">
+                        <span class="solucion-badge">Propuesta Principal</span>
+                        <h3 class="display-6 mb-4" id="recProducto"></h3>
+                        <div class="row g-3 mb-4">
+                            <div class="col-6"><div class="p-3 border rounded-3 bg-white"><small class="text-muted d-block mb-1">Alta</small><span class="h4 fw-bold text-primary" id="recAlta"></span></div></div>
+                            <div class="col-6"><div class="p-3 border rounded-3 bg-white"><small class="text-muted d-block mb-1">Mensual</small><span class="h4 fw-bold text-primary" id="recMes"></span></div></div>
+                        </div>
+                        <div class="argumento-cierre">
+                            <div class="small fw-bold text-success mb-1">🚀 IMPACTO DIRECTO</div>
+                            <div id="recArgumento"></div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-highlight">
+                        <p class="mb-2 text-uppercase small opacity-75 fw-bold">Presupuesto de Cierre (Alta + 1er mes)</p>
+                        <div class="amount" id="ticketAmount"></div>
+                    </div>
+
+                    <div class="mb-5" id="upSection">
+                        <p class="text-uppercase small fw-bold text-muted mb-3">Servicios Complementarios</p>
+                        <div id="upsellsList"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center text-muted border-top bg-white mt-auto">
+        <p class="mb-0 small">© 2026 Martínez & Scienza</p>
+    </footer>
+
+    <script>
+        const data = {
+            almacen: { 
+                name: "Almacén", 
+                dolor: "Consiste en la implementación de un Sistema de Gestión inteligente que centraliza tus ventas y stock, permitiéndote actualizar precios masivamente y evitar pérdidas de mercadería por falta de control.", 
+                recomendado: { nombre: "Sistema de Gestión", alta: "$160.000", mes: "$18.000", argumento: "Te ayuda a recuperar el tiempo que perdés en planillas manuales y reduce el error humano al cobrar." }, 
+                ticket: "$178.000", 
+                upsells: [{ nombre: "Catálogo WhatsApp Business", alta: "$85.000", mes: "$12.000", razon: "Ideal para enviar ofertas semanales directamente al celular de tus clientes habituales." }] 
+            },
+            ferreteria: { 
+                name: "Ferretería", 
+                dolor: "Es un catálogo interactivo de alto rendimiento que permite a tus clientes consultar miles de artículos desde su celular, con sincronización de precios real para que nunca más tengas que dar presupuestos desactualizados.", 
+                recomendado: { nombre: "Catálogo Interactivo", alta: "$185.000", mes: "$12.000", argumento: "Funciona como un vendedor 24/7 que conoce todos tus productos y precios de memoria." }, 
+                ticket: "$197.000", 
+                upsells: [{ nombre: "Módulo de Stock", alta: "$60.000", mes: "$18.000", razon: "Para conectar tu catálogo con el inventario físico de forma automática." }] 
+            },
+            peluqueria: { 
+                name: "Estética / Peluquería", 
+                dolor: "Se trata de una Plataforma de Reservas personalizada que gestiona tu agenda de forma autónoma, permitiendo que tus clientes elijan horario y profesional sin que tengas que interrumpir tu trabajo para atender el teléfono.", 
+                recomendado: { nombre: "Gestión de Turnos", alta: "$150.000", mes: "$12.000", argumento: "Optimiza tu tiempo de trabajo y reduce el ausentismo mediante recordatorios automáticos por WhatsApp." }, 
+                ticket: "$162.000", 
+                upsells: [{ nombre: "E-commerce de Insumos", alta: "$285.000", mes: "$22.000", razon: "Para que tus clientes puedan comprar los productos que usás en el local desde su casa." }] 
+            },
+            kiosco: { 
+                name: "Kiosco / Drugstore", 
+                dolor: "Es una Mini-Tienda de proximidad optimizada para móviles, diseñada para digitalizar tu delivery y mostrar tus promociones destacadas, facilitando la rotación de productos y la fidelización de vecinos.", 
+                recomendado: { nombre: "Mini-Tienda Online", alta: "$185.000", mes: "$12.000", argumento: "Aumenta el ticket promedio al sugerir productos adicionales durante el proceso de compra." }, 
+                ticket: "$197.000", 
+                upsells: [] 
+            }
+        };
+
+        function selectRubro(key) {
+            const info = data[key];
+            document.getElementById('rubroTitle').textContent = info.name;
+            document.getElementById('dolorText').textContent = info.dolor;
+            document.getElementById('recProducto').textContent = info.recomendado.nombre;
+            document.getElementById('recAlta').textContent = info.recomendado.alta;
+            document.getElementById('recMes').textContent = info.recomendado.mes;
+            document.getElementById('recArgumento').textContent = info.recomendado.argumento;
+            document.getElementById('ticketAmount').textContent = info.ticket;
+            
+            const list = document.getElementById('upsellsList');
+            list.innerHTML = info.upsells.map(up => `<div class="upsell-item"><i class="bi bi-patch-check-fill text-warning"></i><div><p class="fw-bold mb-0">${up.nombre}</p><p class="small text-muted mb-0">${up.razon}</p></div></div>`).join('') || '<p class="text-muted">Sin upsells inmediatos.</p>';
+            
+            document.getElementById('homeView').classList.add('hidden');
+            document.getElementById('detailView').classList.remove('hidden');
+            document.getElementById('btnBack').classList.remove('hidden');
+            document.getElementById('btnExit').classList.add('hidden');
+            window.scrollTo(0,0);
+        }
+
+        function goHome() {
+            document.getElementById('detailView').classList.add('hidden');
+            document.getElementById('homeView').classList.remove('hidden');
+            document.getElementById('btnBack').classList.add('hidden');
+            document.getElementById('btnExit').classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>

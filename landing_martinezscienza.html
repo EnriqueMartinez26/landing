@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martínez & Scienza | Digitalización de Comercios</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap');
+
+    :root {
+      --azul: #2D5BFF;
+      --verde: #00C896;
+      --dorado: #cfaa4e;
+      --bordo: #8B1E2D;
+      --grafito: #1A1A1A;
+      --gris-claro: #F9FAFB;
+      --texto: #4B5563;
+      --blanco: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--grafito); line-height: 1.6; background: var(--blanco); }
+
+    nav { background: var(--grafito); padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; }
+    .logo-text { font-family: 'Playfair Display', serif; font-size: 18px; line-height: 1; }
+    .logo-text span { display: block; font-size: 10px; letter-spacing: 3px; color: var(--verde); font-family: 'Inter', sans-serif; }
+    .nav-btn { border: 1px solid var(--verde); color: var(--verde); padding: 8px 16px; border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 12px; transition: 0.3s; }
+    .nav-btn:hover { background: var(--verde); color: var(--grafito); }
+
+    .hero { background: var(--grafito); padding: 100px 40px; text-align: center; color: white; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .hero h1 em { color: var(--dorado); font-style: normal; }
+    .hero-ciudades { display: flex; justify-content: center; flex-wrap: wrap; gap: 34px; margin: 0 auto 30px; }
+    .ciudad { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+    .ciudad::before { content: ''; width: 7px; height: 7px; border-radius: 50%; flex: 0 0 7px; }
+    .ciudad:first-child::before { background: var(--azul); }
+    .ciudad:last-child::before { background: var(--verde); }
+
+    .problema { padding: 80px 40px; background: var(--gris-claro); text-align: center; }
+    .problema h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 40px; }
+    .grid-problemas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+    .card-problema { background: white; padding: 30px; border-radius: 12px; border-top: 4px solid var(--bordo); text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .card-problema h3 { font-size: 18px; margin-bottom: 10px; color: var(--bordo); }
+    .card-problema-presencia { border-top-color: #9B1B30; }
+    .card-problema-presencia h3 { color: #9B1B30; }
+    .card-problema-carga { border-top-color: #A61E3A; }
+    .card-problema-carga h3 { color: #A61E3A; }
+
+    .servicios { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+    .servicios-header { text-align: center; margin-bottom: 60px; }
+    .servicios-header span { color: var(--azul); font-weight: 700; letter-spacing: 2px; font-size: 12px; text-transform: uppercase; }
+    .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .card-servicio { padding: 40px; border-radius: 8px; border: 1px solid #E5E7EB; border-top: 6px solid var(--verde); transition: 0.3s; }
+    .card-servicio h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; }
+    .card-servicio ul { list-style: none; margin-bottom: 30px; }
+    .card-servicio ul li { margin-bottom: 10px; font-size: 14px; display: flex; align-items: center; gap: 8px; color: var(--texto); }
+    .card-servicio ul li::before { content: '->'; color: var(--verde); font-weight: bold; }
+
+    .cta-final { padding: 100px 40px; text-align: center; background: var(--gris-claro); border-top: 1px solid #eee; }
+    .cta-final h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; }
+    .cta-final p { max-width: 600px; margin: 0 auto 30px; color: var(--texto); }
+    .btn-wsp { background: var(--verde); color: var(--grafito); padding: 18px 36px; border-radius: 4px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; transition: 0.3s; }
+
+    footer { background: var(--grafito); color: #888; padding: 40px; text-align: center; font-size: 13px; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <svg width="32" height="32" viewBox="0 0 36 36"><polygon points="16,4 28,16 16,28 4,16" fill="#2D5BFF" /><polygon points="20,13 29,22 20,31 11,22" fill="#00C896" /></svg>
+    <div class="logo-text">Martínez & Scienza<span>SOLUCIONES</span></div>
+  </a>
+  <a href="https://wa.me/3816094007" class="nav-btn">Escribinos</a>
+</nav>
+
+<header class="hero">
+  <h1>Digitalizamos tu negocio con soluciones <em>prácticas.</em></h1>
+
+  <div class="hero-ciudades">
+    <span class="ciudad">Tucumán</span>
+    <span class="ciudad">Córdoba</span>
+  </div>
+</header>
+
+<section class="problema">
+  <h2>Situaciones comunes en el día a día</h2>
+  <div class="grid-problemas">
+    <div class="card-problema">
+      <h3>Ventas que se pierden</h3>
+      <p>Cuando un cliente escribe y no recibe respuesta inmediata, es probable que busque otra opción. La falta de respuesta es un problema.</p>
+    </div>
+    <div class="card-problema card-problema-presencia">
+      <h3>Presencia digital</h3>
+      <p>Hoy, el primer paso de un cliente es buscar en Google. Si tu negocio no aparece con información clara, perdés credibilidad frente a la competencia.</p>
+    </div>
+    <div class="card-problema card-problema-carga">
+      <h3>Carga operativa manual</h3>
+      <p>Gestionar turnos por chat o responder las mismas preguntas de precios consume tiempo que podrías usar para mejorar tu local.</p>
+    </div>
+  </div>
+</section>
+
+<section class="servicios">
+  <div class="servicios-header">
+    <span>Nuestra Propuesta</span>
+    <h2>Servicios diseñados para comercios</h2>
+  </div>
+  <div class="servicios-grid">
+    <div class="card-servicio">
+      <h3>Tu Página Online</h3>
+      <p>Una página web moderna que muestra tus servicios y productos profesionalmente.</p><br>
+      <ul>
+        <li>Adaptada a celulares</li>
+        <li>Tu página en Google Maps</li>
+        <li>Botón de contacto directo</li>
+        <li>Entrega en 7 días</li>
+      </ul>
+    </div>
+    <div class="card-servicio">
+      <h3>WhatsApp Automático</h3>
+      <p>Un asistente que responde por vos las 24 horas del día sin errores.</p><br>
+      <ul>
+        <li>Respuestas automáticas</li>
+        <li>Sistema de turnos online</li>
+        <li>Formularios inteligentes</li>
+        <li>Ahorro de tiempo en chat</li>
+      </ul>
+    </div>
+    <div class="card-servicio">
+      <h3>E-commerce Listo</h3>
+      <p>Tu propia tienda para recibir pagos con tarjeta y gestionar pedidos ordenadamente.</p><br>
+      <ul>
+        <li>Catálogo de productos</li>
+        <li>Integración con Mercado Pago</li>
+        <li>Control de stock simple</li>
+        <li>Gestión de ventas centralizada</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2>¿Hablamos sobre tu proyecto?</h2>
+  <p>Contanos qué necesitás mejorar en tu negocio. Te asesoramos sobre cuál es la herramienta técnica que más te conviene, sin vueltas.</p>
+  <a href="https://wa.me/3816094007" class="btn-wsp">
+    Enviar WhatsApp ahora
+  </a>
+</section>
+
+<footer>
+  <p>Martínez & Scienza Soluciones Digitales<br><br>
+  © 2026 Derechos reservados</p>
+</footer>
+
+</body>
+</html>

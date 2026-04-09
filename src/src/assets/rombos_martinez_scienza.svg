@@ -1,0 +1,8 @@
+<svg width="100%" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Diamond azul cobalto -->
+  <polygon points="48,8 88,48 48,88 8,48" fill="#2D5BFF"/>
+  <!-- Inner highlight -->
+  <polygon points="48,21 78,48 48,75 18,48" fill="white" opacity="0.07"/>
+  <!-- Diamond verde esmeralda -->
+  <polygon points="64,41 88,65 64,89 40,65" fill="#00C896"/>
+</svg>

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martínez & Scienza | Llevamos tu negocio a Internet</title>
+  <meta name="description" content="Te ayudamos a tener presencia online para que más clientes te encuentren. Sin complicaciones técnicas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body class="page-enter">
+  <header>
+    <nav class="site-nav">
+      <div class="container site-nav-inner">
+        <a href="./index.html" class="site-logo" data-link>
+          <img class="brand-logo-img" src="/src/assets/rombos_martinez_scienza.svg" alt="Logo Martínez Scienza" width="36" height="36">
+          <span class="logo-text">Martínez & Scienza<span class="logo-subtitle">SOLUCIONES</span></span>
+        </a>
+        <div class="site-nav-right">
+          <div class="site-nav-actions" id="siteNavActions">
+            <a href="./pitch-deck.html" class="site-nav-link">Propuestas</a>
+            <a href="#" id="aboutModalTrigger" class="site-nav-link">Quiénes Somos</a>
+            <a href="#contacto" class="nav-btn" id="navContactBtn">Escribinos</a>
+          </div>
+          <button class="burger-menu" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Digitalizamos tu negocio con <span class="hero-title-dorado">soluciones</span> prácticas.</h1>
+
+        <div class="hero-ciudades">
+          <span class="ciudad">Tucumán</span>
+          <span class="ciudad">Córdoba</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="problema">
+      <div class="section-intro">
+        <h2>Situaciones comunes en el día a día</h2>
+        <p>Estos son algunos de los puntos que más frenan el crecimiento de un comercio cuando no tiene una estrategia digital clara.</p>
+      </div>
+      <div class="grid-problemas">
+        <article class="card-problema reveal-on-scroll">
+          <h3>Ventas que se pierden</h3>
+          <p>Cuando un cliente escribe y no recibe respuesta inmediata, es probable que busque otra opción. La falta de respuesta es un problema.</p>
+        </article>
+        <article class="card-problema reveal-on-scroll">
+          <h3>Presencia digital</h3>
+          <p>Hoy, el primer paso de un cliente es buscar en Google. Si tu negocio no aparece con información clara, perdés credibilidad frente a la competencia.</p>
+        </article>
+        <article class="card-problema reveal-on-scroll">
+          <h3>Carga operativa manual</h3>
+          <p>Gestionar turnos por chat o responder las mismas preguntas de precios consume tiempo que podrías usar para mejorar tu local.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+      <div class="servicios-header">
+        <p class="servicios-kicker">NUESTRA PROPUESTA</p>
+        <h2>Lo que hacemos para vos</h2>
+        <p>Implementaciones concretas para que empieces a vender más y atender mejor, sin complicarte con lo técnico.</p>
+      </div>
+      <div class="servicios-grid">
+        <article class="card-servicio reveal-on-scroll">
+          <h3>Tu Página Online</h3>
+          <p>Una página web moderna que muestra tus servicios y productos profesionalmente.</p>
+          <ul>
+            <li>Adaptada a celulares</li>
+            <li>Tu página en Google Maps</li>
+            <li>Botón de contacto directo</li>
+            <li>Entrega en 7 días</li>
+          </ul>
+        </article>
+        <article class="card-servicio reveal-on-scroll">
+          <h3>Sistema de Gestión</h3>
+          <p>Control de stock y ventas para ferreterías o negocios con gran volumen de artículos.</p>
+          <ul>
+            <li>Lista de precios y stock al día</li>
+            <li>Gestión de ventas y presupuestos</li>
+            <li>Reportes de ingresos mensuales</li>
+            <li>Menos planillas, más control</li>
+          </ul>
+        </article>
+        <article class="card-servicio reveal-on-scroll">
+          <h3>E-commerce</h3>
+          <p>Tu propia tienda para recibir pagos con tarjeta y gestionar pedidos ordenadamente.</p>
+          <ul>
+            <li>Catálogo de productos</li>
+            <li>Integración con Mercado Pago</li>
+            <li>Control de stock simple</li>
+            <li>Gestión de ventas centralizada</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="proyectos-home" id="proyectos-home">
+      <div class="proyectos-home-header">
+        <h2>CLIENTES QUE CONFÍAN EN NOSOTROS</h2>
+        <p>Estos son algunos de los negocios que ya están creciendo con nosotros</p>
+      </div>
+      <div class="proyectos-grid" id="projectsGrid"></div>
+    </section>
+
+    <section class="cta-final" id="contacto">
+      <h2>¿Hablamos?</h2>
+      <p>Contanos qué necesitás. Te decimos qué conviene y cuánto sale, sin vueltas.</p>
+      
+      <div class="cta-actions">
+        <a href="https://wa.me/3816094007?text=Hola Enrique! Me interesa recibir asesoramiento para digitalizar mi negocio." class="btn-group-wsp" target="_blank" rel="noreferrer">Contacto Tucumán</a>
+        <div class="cta-separator"></div>
+        <a href="https://wa.me/3513091448?text=Hola Mateo! Me interesa recibir asesoramiento para digitalizar mi negocio." class="btn-group-wsp" target="_blank" rel="noreferrer">Contacto Córdoba</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Martínez & Scienza Soluciones Digitales<br><br>© 2026 Derechos reservados</p>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <!--  MODAL QUIÉNES SOMOS                                        -->
+  <!-- ════════════════════════════════════════════════════════════ -->
+  <div id="aboutModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+    <div class="modal-container">
+
+      <!-- Close -->
+      <button id="closeModalBtn" class="modal-close" aria-label="Cerrar modal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- ── HEADER ── -->
+      <header class="modal-header">
+        <p class="header-eyebrow">Martínez &amp; Scienza · Soluciones Digitales</p>
+        <h2 class="header-title" id="modalTitle">
+          Dos técnicos comprometidos con<br>
+          <em>la digitalización de tu negocio.</em>
+        </h2>
+        <p class="header-subtitle">
+          Combinamos formación técnica de la UTN con experiencia real en el mercado IT: cada solución que
+          construimos está pensada para generar resultados medibles, no solo para lucir bien en pantalla.
+        </p>
+      </header>
+
+      <!-- ── BODY ── -->
+      <div class="modal-body">
+
+        <!-- MISIÓN -->
+        <div class="mission-block">
+          <div class="mission-rule"></div>
+          <p class="mission-text">
+            Creemos que la tecnología bien aplicada es el diferencial más poderoso que puede tener
+            una empresa hoy. Por eso no vendemos software genérico: <strong>diseñamos cada solución
+            desde cero</strong>, entendiendo primero cómo funciona tu negocio y qué obstáculos
+            reales necesitás resolver.
+          </p>
+        </div>
+
+        <!-- RESPALDO ACADÉMICO -->
+        <div class="respaldo-section">
+          <p class="section-label">Nuestro respaldo</p>
+          <div class="respaldo-grid">
+
+            <article class="respaldo-card">
+              <span class="respaldo-icon"><i class="bi bi-mortarboard-fill"></i></span>
+              <h3>Técnicos UTN</h3>
+              <p>Recibidos como Técnicos en Programación en la Universidad Tecnológica Nacional, una de las instituciones de ingeniería más reconocidas del país.</p>
+            </article>
+
+            <article class="respaldo-card">
+              <span class="respaldo-icon"><i class="bi bi-gear-fill"></i></span>
+              <h3>Experiencia Real</h3>
+              <p>Trayectoria comprobable como desarrolladores en empresas de IT y automatización, aplicando arquitecturas escalables en entornos reales.</p>
+            </article>
+
+            <article class="respaldo-card">
+              <span class="respaldo-icon"><i class="bi bi-geo-alt-fill"></i></span>
+              <h3>Dos sedes activas</h3>
+              <p>Operamos desde Tucumán y Córdoba con atención personalizada en cada plaza. Trato directo con quienes van a ejecutar tu proyecto, siempre.</p>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- FOUNDERS -->
+        <div class="founders-section">
+          <p class="section-label">Los fundadores</p>
+          <div class="founders-grid">
+
+            <!-- Enrique -->
+            <article class="founder-card">
+              <div class="founder-header">
+                <div class="founder-avatar" aria-hidden="true">EM</div>
+                <div class="founder-id">
+                  <p class="founder-name">Enrique Leonel Martínez</p>
+                  <p class="founder-role">Co-Fundador · Desarrollador Full Stack</p>
+                  <span class="founder-sede"><i class="bi bi-geo-alt-fill"></i> Tucumán</span>
+                </div>
+              </div>
+              <div class="founder-body">
+                <p class="founder-bio">
+                  Técnico en Programación (UTN) y estudiante de Ingeniería. Desarrollador Full Stack en Laboratorios RADA especializado en arquitecturas escalables (.NET/React). Enfocado en sistemas robustos y funcionales.
+                </p>
+                <div class="founder-tags">
+                  <span class="tag">Full Stack</span>
+                  <span class="tag">Node / C#</span>
+                  <span class="tag">Arquitectura</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Leandro -->
+            <article class="founder-card">
+              <div class="founder-header">
+                <div class="founder-avatar" aria-hidden="true">LS</div>
+                <div class="founder-id">
+                  <p class="founder-name">Leandro Mateo Scienza Nielsen</p>
+                  <p class="founder-role">Co-Fundador · Software Engineer</p>
+                  <span class="founder-sede"><i class="bi bi-geo-alt-fill"></i> Córdoba</span>
+                </div>
+              </div>
+              <div class="founder-body">
+                <p class="founder-bio">
+                  Técnico en Programación (UTN). Software Engineer en Boreal IT Solutions y especialista en automatización y robótica. Enfocado en soluciones que convierten visitantes en clientes.
+                </p>
+                <div class="founder-tags">
+                  <span class="tag">Microservicios</span>
+                  <span class="tag">Automatización</span>
+                  <span class="tag">SEO / Producto</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="modal-cta">
+          <div class="cta-text-block">
+            <p class="cta-pretitle">¿Tenés un proyecto en mente?</p>
+            <p class="cta-title">Contanos qué necesitás.<br>La primera consulta es sin cargo.</p>
+          </div>
+          <a class="cta-btn" id="modalCtaBtn" href="#contacto" style="text-decoration:none;">
+            Hablar con el equipo →
+          </a>
+        </div>
+
+      </div><!-- /modal-body -->
+    </div><!-- /modal-container -->
+  </div>
+
+  <script type="module" src="/src/scripts/app.js"></script>
+</body>
+</html>
